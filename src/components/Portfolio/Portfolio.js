@@ -12,6 +12,7 @@ import "./portfolio.css";
 
 const Portfolio =(props)=>{
     const [info,setInfo]=useState([]);
+    const [isLoading,setIsLoading]=useState(true);
     const getInfo= async () =>{
         try{
           const { data }= await axios.get('https://portfoliocreater-backend.herokuapp.com/info/portfolioInfo',
@@ -19,6 +20,7 @@ const Portfolio =(props)=>{
               {'auth':`${localStorage.getItem('auth')}`}});
               setInfo(data)
               console.log(data);
+              setIsLoading(false);
         }catch(err){
              console.log(err);
         }
@@ -26,6 +28,17 @@ const Portfolio =(props)=>{
        useEffect(()=>{
       getInfo();
     },[])// eslint-disable-line react-hooks/exhaustive-deps
+
+if(isLoading){
+    return (
+        <div className="loading">
+            <p>
+                <b>Your Data is Loading...</b>
+            </p>
+        </div>
+    )
+}
+else{
     return(
         <>
             <Header {...props} />
@@ -36,6 +49,7 @@ const Portfolio =(props)=>{
             <Contact contactdata={info}/>
         </>
     )
+}
 }
 
 

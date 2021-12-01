@@ -67,9 +67,12 @@
     color: whitesmoke;
 }
 
-.signup__Formlogintag>a{
-    text-decoration: none;
-    color: skyblue;
+.signup__Formlogintag>button{
+    background: none;
+    border: none;
+    color: aquamarine;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 15px;
 }
 
 

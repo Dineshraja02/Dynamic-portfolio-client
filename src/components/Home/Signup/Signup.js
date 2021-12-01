@@ -71,7 +71,8 @@ const SignUp = (props) => {
                     </button>
                     <br/>
                     <span className="signup__Formlogintag">
-                        Already have an account? <a href="/login" >click here</a>
+                        Already have an account? <button  onClick={()=>{
+                    props.history.push("/login");}} >click here</button>
                     </span>
                 </form>
             </div>

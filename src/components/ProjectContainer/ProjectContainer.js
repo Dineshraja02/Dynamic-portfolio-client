@@ -10,7 +10,7 @@ const ProjectContainer = () => {
    const [projectData,setProjectData]=useState([]);
     const getProjectInfo= async () =>{
         try{
-          const {data} = await axios.get('https://portfoliocreater-backend.herokuapp.com/portfolioInfo',
+          const {data} = await axios.get('https://portfoliocreater-backend.herokuapp.com/formInfo/portfolioInfo',
           {headers:
               {'auth':`${localStorage.getItem('auth')}`}});
               setProjectData(data.Project)

@@ -21,7 +21,7 @@ const ProjectContainer = () => {
     }
        useEffect(()=>{
       getProjectInfo();
-    },[])
+    },[])// eslint-disable-line react-hooks/exhaustive-deps
 
         
     return (

@@ -20,7 +20,7 @@ const ExperienceContainer = () => {
     }
        useEffect(()=>{
       getExperienceInfo();
-    },[])
+    },[])// eslint-disable-line react-hooks/exhaustive-deps
     return (
         <Element className="experienceContainer" id="exp">
             <h1>Experience</h1>

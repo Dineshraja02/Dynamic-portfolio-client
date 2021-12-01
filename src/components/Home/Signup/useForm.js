@@ -44,7 +44,7 @@ useEffect(() => {
         toast.error(err.response.data);
     })
     }
-}, [errors])
+}, [errors])// eslint-disable-line react-hooks/exhaustive-deps
 return {handleChange,values,handleSubmit,errors};
 }
 

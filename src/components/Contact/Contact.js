@@ -20,7 +20,7 @@ const Contact = () => {
     }
        useEffect(()=>{
       getContactInfo();
-    },[])
+    },[])// eslint-disable-line react-hooks/exhaustive-deps
     return (
         <Element className="contact" id="contact">
             <h1>Contact</h1>

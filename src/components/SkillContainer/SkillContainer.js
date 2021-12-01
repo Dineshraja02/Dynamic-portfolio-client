@@ -19,9 +19,8 @@ const SkillContainer = () => {
         }
     }
        useEffect(()=>{
-      // eslint-disable-next-line
       getskillInfo();
-    },[])
+    },[])// eslint-disable-line react-hooks/exhaustive-deps
 
     return (
 

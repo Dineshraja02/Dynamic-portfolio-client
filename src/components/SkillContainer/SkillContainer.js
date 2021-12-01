@@ -9,7 +9,7 @@ const SkillContainer = () => {
     const [skillData,setSkillData]=useState([]);
     const getskillInfo= async () =>{
         try{
-          const {data} = await axios.get('http://localhost:3001/info/portfolioInfo',
+          const {data} = await axios.get('https://portfoliocreater-backend.herokuapp.com/portfolioInfo',
           {headers:
               {'auth':`${localStorage.getItem('auth')}`}});
               setSkillData(data.Skills)

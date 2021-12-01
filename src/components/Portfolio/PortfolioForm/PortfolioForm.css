@@ -50,4 +50,11 @@
       box-shadow: 2px 2px 1px gray;
   }
   
+  .redirect_button{
+      background: none;
+      border: none;
+      color:crimson;
+      font-size: 17px;
+      font-family: 'Josefin Sans', sans-serif;
+  }
 

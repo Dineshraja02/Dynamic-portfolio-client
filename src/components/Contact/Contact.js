@@ -9,7 +9,7 @@ const Contact = () => {
     const [contactData,setContactData]=useState([]);
     const getContactInfo= async () =>{
         try{
-          const {data} = await axios.get('http://localhost:3001/info/portfolioInfo',
+          const {data} = await axios.get('https://portfoliocreater-backend.herokuapp.com/info/portfolioInfo',
           {headers:
               {'auth':`${localStorage.getItem('auth')}`}});
               setContactData(data)

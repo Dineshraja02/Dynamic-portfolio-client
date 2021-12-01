@@ -3,7 +3,7 @@ import axios from "axios";
 import "./PortfolioForm.css";
 import {AddCircle,RemoveCircle} from "@material-ui/icons";
 
-const API_URL='http://localhost:3001/info/formInfo';
+const API_URL='https://portfoliocreater-backend.herokuapp.com/info/formInfo';
 
 const initialValues={
   fullName:"",
@@ -69,7 +69,8 @@ function PortfolioForm (props){
                 <div className="background_portfolioForm" >
                   <div className="portfolio__form" >
                   <h1>Portfolio Information</h1>
-                  <p>Already filled the form</p><a href="/portfolio">click here</a>
+                  <p>Already filled the form? <button className="redirect_button" onClick={()=>{
+                    props.history.push("/portfolio");}} >click here</button></p>
                   <Form onSubmit={handleSubmit} > 
                   <div >
                   <input 

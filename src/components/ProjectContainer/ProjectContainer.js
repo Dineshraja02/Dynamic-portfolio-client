@@ -1,29 +1,12 @@
-import {useEffect,useState} from 'react';
-import axios from "axios";
+import React from "react";
 import Project from '../Project/Project';
 import {Element} from "react-scroll";
 import "./ProjectContainer.css";
 
 
 
-const ProjectContainer = () => {
-   const [projectData,setProjectData]=useState([]);
-    const getProjectInfo= async () =>{
-        try{
-          const {data} = await axios.get('https://portfoliocreater-backend.herokuapp.com/formInfo/portfolioInfo',
-          {headers:
-              {'auth':`${localStorage.getItem('auth')}`}});
-              setProjectData(data.Project)
-              console.log(projectData);
-        }catch(err){
-             console.log(err);
-        }
-    }
-       useEffect(()=>{
-      getProjectInfo();
-    },[])// eslint-disable-line react-hooks/exhaustive-deps
-
-        
+const ProjectContainer = ({projectdata}) => {   
+    console.log(projectdata); 
     return (
         <Element  className="projectContainer" id="projects">
             <h1>Projects</h1>
@@ -33,7 +16,7 @@ const ProjectContainer = () => {
             <div className="projectContainer__projects">
 
 {
-           projectData.map((project,index)=>{
+           projectdata.map((project,index)=>{
             return(
                 <Project
                   key={index}

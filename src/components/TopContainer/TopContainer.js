@@ -3,10 +3,10 @@ import {Element} from "react-scroll"
 import TopContent from '../TopContent/TopContent';
 import "./TopContainer.css";
 
-const TopContainer = () => {
+const TopContainer = ({topdata}) => {
     return (
-           <Element name="about" className="topContainer">
-              <TopContent/>
+           <Element topdata={topdata} name="about" className="topContainer">
+              <TopContent topdata={topdata}/>
            </Element>
     )
 }

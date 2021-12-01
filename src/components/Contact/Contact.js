@@ -1,48 +1,33 @@
-import {useEffect,useState} from 'react';
-import axios from "axios";
+import React from "react";
 import {Element} from "react-scroll";
 import {IconButton} from "@material-ui/core";
 import {Facebook, Instagram, LinkedIn} from "@material-ui/icons";
 import "./Contact.css";
 
-const Contact = () => {
-    const [contactData,setContactData]=useState([]);
-    const getContactInfo= async () =>{
-        try{
-          const {data} = await axios.get('https://portfoliocreater-backend.herokuapp.com/info/portfolioInfo',
-          {headers:
-              {'auth':`${localStorage.getItem('auth')}`}});
-              setContactData(data)
-              console.log(contactData);
-        }catch(err){
-             console.log(err);
-        }
-    }
-       useEffect(()=>{
-      getContactInfo();
-    },[])// eslint-disable-line react-hooks/exhaustive-deps
+const Contact = ({contactdata}) => {
+    console.log(contactdata);
     return (
         <Element className="contact" id="contact">
             <h1>Contact</h1>
         <div className="contact__container">
             <p>
-                Email : <span>{contactData.email}</span>
+                Email : <span>{contactdata.email}</span>
             </p>
             <p>
-                Github :<span>{contactData.github}</span>
+                Github :<span>{contactdata.github}</span>
             </p>
             <div className="contact_icons">
-                <a target="_blank "href={contactData.facebook}>
+                <a target="_blank "href={contactdata.facebook}>
                     <IconButton>
                         <Facebook />
                     </IconButton>
                 </a>
-                <a target="_blank " href={contactData.instagram}>
+                <a target="_blank " href={contactdata.instagram}>
                     <IconButton>
                         <Instagram />
                     </IconButton>
                 </a>
-                <a target="_blank " href={contactData.linkedIn}>
+                <a target="_blank " href={contactdata.linkedIn}>
                     <IconButton>
                         <LinkedIn />
                     </IconButton>

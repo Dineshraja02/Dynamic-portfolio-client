@@ -1,30 +1,15 @@
-import {useEffect, useState} from 'react'
 import { Link } from 'react-scroll';
 import "./TopContent.css";
-import axios from 'axios';
 
-const TopContent = () => {
-    const [topData,setTopData]=useState([]);
-    const getInfo= async () =>{
-        try{
-          const {data} = await axios.get('https://portfoliocreater-backend.herokuapp.com/formInfo/portfolioInfo',
-          {headers:
-              {'auth':`${localStorage.getItem('auth')}`}});
-              setTopData(data);
-        }catch(err){
-             console.log(err);
-        }
-    }
-       useEffect(()=>{
-      getInfo();
-    },[])
 
+const TopContent = ({topdata}) => {
+    console.log(topdata);
     return (
         <div className="topContent">
             <div className="topContent__container">
-                <h1>Mr.{topData.fullName}</h1>
-                <p>{topData.about}</p>
-                <a target="_blank" rel="noreferrer" href={topData.resume}>
+                <h1>Mr.{topdata.fullName}</h1>
+                <p>{topdata.about}</p>
+                <a target="_blank" rel="noreferrer" href={topdata.resume}>
                     <button className="topContent__downloadButton">View CV</button>
                 </a>
                 <Link to="projects"smooth={true} duration={500}>

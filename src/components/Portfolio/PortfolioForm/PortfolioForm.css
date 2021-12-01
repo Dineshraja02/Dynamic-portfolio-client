@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+.background_portfolioForm{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+}
+.portfolio__form{
+    font-family: 'Josefin Sans', sans-serif;
+    background:whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center ;
+    width:550px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    box-shadow:  10px 10px 5px rgb(99, 98, 98);
+}
+
+.portfolio__form>h1{
+    margin:20px;
+    color: black;
+}
+
+.portfolioform__FormInputs{
+   border:none;
+   margin:10px ;
+   outline: none;
+   padding: 10px;
+   display: block;
+   background-color: whitesmoke;
+   width: 400px;
+   border-bottom: 1px solid black;
+  }
+
+  .portfolioform__button{
+      background:none;
+      border: none;     
+  }
+  .portfolioform__FormButton{
+      border: none;
+      margin: 20px;
+      background-color: rgb(36, 36, 117);
+      padding: 10px;
+      color: white;
+      border-radius: 3px ;
+      box-shadow: 2px 2px 1px gray;
+  }
+  
+

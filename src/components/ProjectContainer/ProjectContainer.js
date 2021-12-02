@@ -5,8 +5,7 @@ import "./ProjectContainer.css";
 
 
 
-const ProjectContainer = ({projectdata}) => {   
-    console.log(projectdata); 
+const ProjectContainer = ({projectdata}) => {    
     return (
         <Element  className="projectContainer" id="projects">
             <h1>Projects</h1>

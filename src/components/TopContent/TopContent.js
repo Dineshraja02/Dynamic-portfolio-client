@@ -3,7 +3,6 @@ import "./TopContent.css";
 
 
 const TopContent = ({topdata}) => {
-    console.log(topdata);
     return (
         <div className="topContent">
             <div className="topContent__container">

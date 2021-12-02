@@ -2,8 +2,8 @@ import React from 'react';
 import "./Header.css"
 import {Link} from "react-scroll";
 
+
 const Header = (props) => {
-    console.log(props)
     return (
           <div className="header">
             <div className="header__left">

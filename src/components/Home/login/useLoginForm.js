@@ -39,7 +39,8 @@ useEffect(() => {
 
     })
     .catch(err =>{
-        toast.error(err.response.data);
+         toast.error("Email or password invalid");
+         console.log(err)
     })
     }
 }, [errors])// eslint-disable-line react-hooks/exhaustive-deps

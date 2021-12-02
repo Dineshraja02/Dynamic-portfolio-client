@@ -18,8 +18,7 @@ const Portfolio =(props)=>{
           const { data }= await axios.get('https://portfoliocreater-backend.herokuapp.com/info/portfolioInfo',
           {headers:
               {'auth':`${localStorage.getItem('auth')}`}});
-              setInfo(data)
-              console.log(data);
+              setInfo(data);
               setIsLoading(false);
         }catch(err){
              console.log(err);

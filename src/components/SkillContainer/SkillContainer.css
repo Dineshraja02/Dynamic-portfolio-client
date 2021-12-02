@@ -47,19 +47,5 @@
     background-color: tomato;
 }
 
-.skillContainer__slider2>div> .MuiLinearProgress-barColorPrimary{
-    background-color: rgb(156,26,3);
-}
 
-.skillContainer__slider3>div> .MuiLinearProgress-barColorPrimary{
-    background-color: rgb(255,145,0);
-}
-
-.skillContainer__slider4>div> .MuiLinearProgress-barColorPrimary{
-    background-color: rgb(228,213,0);
-}
-
-.skillContainer__slider5>div> .MuiLinearProgress-barColorPrimary{
-    background-color: rgb(136,146,0);
-}
 

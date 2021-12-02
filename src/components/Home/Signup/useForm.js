@@ -41,7 +41,7 @@ useEffect(() => {
         console.log(res.data)
     })
     .catch(err =>{
-        toast.error(err.response.data);
+        toast.error("Registration failed.Please check the Credentials");
     })
     }
 }, [errors])// eslint-disable-line react-hooks/exhaustive-deps

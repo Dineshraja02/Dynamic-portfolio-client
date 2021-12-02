@@ -5,7 +5,6 @@ import {Facebook, Instagram, LinkedIn} from "@material-ui/icons";
 import "./Contact.css";
 
 const Contact = ({contactdata}) => {
-    console.log(contactdata);
     return (
         <Element className="contact" id="contact">
             <h1>Contact</h1>
